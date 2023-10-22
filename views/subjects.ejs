@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <div>
+            <h2><%= title %></h2>
+            <h3>
+                <a href="/">Back</a> &emsp;
+                <a href="/subjects/addForm">Create</a>
+            </h3>
+            <% if (message) { %>
+                <div style="color:brown;"> <%= message %> </div>
+            <% } %>
+        </div>
+        <div class='subject'>
+            <table>
+                <thead>
+                    <th>Credit  </th>
+                    <th>Subject</th>
+                    <th colspan="2">Tools</th>
+                </thead>
+                <tbody>
+                    <% subjects.forEach((subject)=> { %>
+                        <tr>
+                            <td><%= subject.code %></td>
+                            <td><%= subject.name %></td>
+                            <td>
+                                <a href="/subjects/edit/<%= subject.id %>">Edit</a>
+                            </td>
+                            <td>
+                                <a href="/subjects/delete/<%= subject.id %>" 
+                                    onclick="return confirm('Are you sure you want to delete?')">Delete</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

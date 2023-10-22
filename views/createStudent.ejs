@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action='/students/create' method='post'>
+        <p>
+            <input type='text' name='students[code]' placeholder='Student Code' />
+        </p>
+        <p>
+            <input type='text' name='students[name]' placeholder='Student Name' />
+        </p>
+        <p>
+            <a href="/students">Back</a> &emsp;
+            <input type='submit' value='Create' />
+        </p>
+    </form>
+</body>
+</html>

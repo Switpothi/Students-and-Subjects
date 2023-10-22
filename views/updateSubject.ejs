@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action='/subjects/update' method='post'>
+        <input type='hidden' name='subjects[id]' value='<%= subject[0].id %>' />
+        <p>
+            Code: <input type='INT' name='subjects[code]' placeholder='Subject Credit' value='<%= subject[0].credit %>' />
+        </p>
+        <p>
+            Name: <input type='text' name='subjects[name]' placeholder='Subject Name' value='<%= subject[0].name %>' />
+        </p>
+        <p>
+            <a href="/subjects/">Back</a>  &emsp;
+            <input type='submit' value='Update' />
+        </p>
+    </form>
+</body>
+</html>

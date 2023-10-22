@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action='/subjects/create' method='post'>
+        <p>
+            <input type='INT' name='subjects[code]' placeholder='Subject credit' />
+        </p>
+        <p>
+            <input type='text' name='subjects[name]' placeholder='Subject ID' />
+        </p>
+        <p>
+            <a href="/subjects">Back</a> &emsp;
+            <input type='submit' value='Create' />
+        </p>
+    </form>
+</body>
+</html>
