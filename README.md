@@ -7,4 +7,4 @@ Rest APIs | Node.Js | JavaScript
 ===============================
 
 This app is a student and subject data management application that uses Node.js to handle the backend.
-develop by Swit Pothinimitr 
+develop by Swit Pothinimitr 2nd year of studies (last year)
